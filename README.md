@@ -22,9 +22,14 @@ Este es un proyecto creado para ir creando una pagina web paso a paso en clase.
 
 id-numero id
 
+Nombre-Nombre del evento
+
+Locaclizacion-En este campo se guarda donde se realiza el evento
+
 Aforo- Numero de personas que pueden asistir
 
 FIni-Fecha en la que comienza el evento
 
 FFin-Fecha en la que finaliza el evento
 
+---
