@@ -1,3 +1,7 @@
+// Creo mi constante de aforo limitado , en caso de que sea menor o igual a este numero
+//  , el evento sera de aforo limitado o aforo amplio x ejemplo
+
+const AFORO_LIMITADO=500;
 const lista =[
 {
     id:0,
@@ -37,25 +41,15 @@ const lista =[
     fechaIni:"24-10-2026",
     fechaFin:"24-10-2026"
 }
-//,
-//{
-    //id:4,
-   // nombre:"",
-   // tipoEvento:"",
-   // localizacion:"",
-   // aforo:0,
-    //fechaIni:"",
-    //fechaFin:""
-//}
-//,
-//{
-   // id:5,
-   // nombre:"",
-   // tipoEvento:"",
-   // localizacion:"",
-   // aforo:0,
-   //fechaIni:"",
-    ///fechaFin:""
-//}
 
 ]
+// A continuacion tengo que crear dos funciones , una que 
+function recorrerLista(lista){
+console.log("--- Listado de todos los eventos ---")
+
+for (const nombreEvento of lista) {
+
+const aforo = lista.nombre <= AFORO_LIMITADO ? "Limitado" : "Amplio";
+console.log(`${lista.id}. ${lista.nombre} · ${aforo}`);
+}
+}
