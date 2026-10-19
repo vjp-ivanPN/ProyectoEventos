@@ -9,8 +9,8 @@ const lista =[
     tipoEvento:"Carrera",
     localizacion:" Parque Forestal de Valdebebas - Madrid",
     aforo:10000,
-    fechaIni:"27-09-2026",
-    fechaFin:"27-09-2026"
+    fechaIni:"2026-27-09",
+    fechaFin:"2026-27-09"
 },
 {
     id:1,
@@ -18,8 +18,8 @@ const lista =[
     tipoEvento:"Gastronomico",
     localizacion:"Malaga",
     aforo:500,
-    fechaIni:"07-10-2026",
-    fechaFin:"14-10-2026"
+    fechaIni:"2026-07-10",
+    fechaFin:"2026-14-10"
 }
 ,
 {
@@ -28,8 +28,8 @@ const lista =[
     tipoEvento:"Pesca",
     localizacion:"Rio Tajo",
     aforo:3000,
-    fechaIni:"21-11-2026",
-    fechaFin:"22-11-2026"
+    fechaIni:"2026-21-11",
+    fechaFin:"2026-22-11"
 }
 ,
 {
@@ -38,12 +38,13 @@ const lista =[
     tipoEvento:"Pesca",
     localizacion:"Plasencia",
     aforo:7000,
-    fechaIni:"24-10-2026",
-    fechaFin:"24-10-2026"
+    fechaIni:"2026-24-10",
+    fechaFin:"2026-24-10"
 }
 
 ]
-// A continuacion tengo que crear dos funciones , una que 
+// A continuacion tengo que crear dos funciones , una que recorra la lista
+
 function recorrerLista(lista){
 console.log("--- Listado de todos los eventos ---")
 
