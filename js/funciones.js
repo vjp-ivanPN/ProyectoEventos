@@ -5,8 +5,7 @@ function listarTodos(lista) {
 
     for (const evento of lista) {
         const aforoEvento = evento.aforo <= AFORO_LIMITADO
-            ? "Aforo limitado"
-            : "Aforo amplio";
+            ? "Aforo limitado": "Aforo amplio";
 
         console.log(
             `${evento.id}. ${evento.nombre} | ${evento.tipoEvento} | ${evento.localizacion} | ${aforoEvento}`
@@ -129,7 +128,7 @@ function estadisticas(lista) {
             mayor = evento;
         }
     }
-    
+
 // Calculo la media
 
     const media = total / lista.length;
