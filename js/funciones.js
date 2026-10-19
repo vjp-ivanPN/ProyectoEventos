@@ -109,3 +109,34 @@ function eliminarPorId(lista, id) {
     return false;
 }
 
+  //                //
+ // Ejercicios 8.2 //
+//                //
+
+function estadisticas(lista) {
+    if (lista.length === 0) {
+        console.log("La lista de eventos está vacía.");
+        return;
+    }
+
+    let total = 0;
+    let mayor = lista[0];
+
+    for (const evento of lista) {
+        total += evento.aforo;
+
+        if (evento.aforo > mayor.aforo) {
+            mayor = evento;
+        }
+    }
+    
+// Calculo la media
+
+    const media = total / lista.length;
+
+    console.log("--- Estadísticas de eventos ---");
+    console.log("Total de aforo:", total);
+    console.log("Media de aforo:", media.toFixed(1));
+    console.log("Evento con mayor aforo:", mayor.nombre);
+    console.log("Aforo máximo:", mayor.aforo);
+}
