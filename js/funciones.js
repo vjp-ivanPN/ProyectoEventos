@@ -64,3 +64,48 @@ function contarPorCategoria(lista) {
     console.log("Gastronómicos:", gastronomicos);
     console.log("Pesca:", pescas);
 }
+//---------------------------------------------------
+//                                                  -
+                    //Sesion 8                      -
+//                                                  -
+//---------------------------------------------------
+
+function buscarPorTexto(lista, texto) {
+    const resultados = [];
+    const textoMinuscula = texto.toLowerCase();
+
+    for (const evento of lista) {
+        if (evento.nombre.toLowerCase().includes(textoMinuscula)) {
+            resultados.push(evento);
+        }
+    }
+
+    return resultados;
+}
+
+function anadir(lista, elemento) {
+    let mayorId = -1;
+
+    for (const evento of lista) {
+        if (evento.id > mayorId) {
+            mayorId = evento.id;
+        }
+    }
+
+    elemento.id = mayorId + 1;
+    lista.push(elemento);
+
+    return elemento.id;
+}
+
+function eliminarPorId(lista, id) {
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i].id === id) {
+            lista.splice(i, 1);
+            return true;
+        }
+    }
+
+    return false;
+}
+
