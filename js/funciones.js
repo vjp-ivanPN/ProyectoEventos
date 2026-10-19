@@ -32,3 +32,35 @@ function filtrarEventos(lista, limite) {
 // Para ejecutarla 
 // const total = filtrarEventos(lista, 3000);
 // console.log("Total de eventos encontrados:", total);
+
+// Contar los tipos de eventos de cada categoria que existen
+
+function contarPorCategoria(lista) {
+    let carreras = 0;
+    let gastronomicos = 0;
+    let pescas = 0;
+
+    for (const evento of lista) {
+        switch (evento.tipoEvento) {
+            case "Carrera":
+                carreras++;
+                break;
+
+            case "Gastronomico":
+                gastronomicos++;
+                break;
+
+            case "Pesca":
+                pescas++;
+                break;
+
+            default:
+                console.log("Categoría desconocida:", evento.tipoEvento);
+        }
+    }
+
+    console.log("--- Eventos por categoría ---");
+    console.log("Carreras:", carreras);
+    console.log("Gastronómicos:", gastronomicos);
+    console.log("Pesca:", pescas);
+}
