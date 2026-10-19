@@ -14,3 +14,21 @@ function listarTodos(lista) {
     }
 }
 
+// Siguiente funcion Filtro
+
+function filtrarEventos(lista, limite) {
+    let encontrados = 0;
+
+    for (const evento of lista) {
+        if (evento.aforo >= limite && evento.tipoEvento === "Pesca") {
+            console.log(`${evento.id}. ${evento.nombre} | Aforo: ${evento.aforo}`);
+            encontrados++;
+        }
+    }
+
+    return encontrados;
+}
+
+// Para ejecutarla 
+// const total = filtrarEventos(lista, 3000);
+// console.log("Total de eventos encontrados:", total);
