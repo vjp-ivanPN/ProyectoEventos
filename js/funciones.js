@@ -28,9 +28,7 @@ function filtrarEventos(lista, limite) {
     return encontrados;
 }
 
-// Para ejecutarla 
-// const total = filtrarEventos(lista, 3000);
-// console.log("Total de eventos encontrados:", total);
+
 
 // Contar los tipos de eventos de cada categoria que existen
 
