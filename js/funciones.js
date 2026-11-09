@@ -1,19 +1,15 @@
-// En este apartado creare las funciones para que sea mas visible
-
 function listarTodos(lista) {
     console.log("--- Lista de todos los eventos ---");
 
     for (const evento of lista) {
         const aforoEvento = evento.aforo <= AFORO_LIMITADO
-            ? "Aforo limitado": "Aforo amplio";
+            ? "Aforo limitado" : "Aforo amplio";
 
         console.log(
             `${evento.id}. ${evento.nombre} | ${evento.tipoEvento} | ${evento.localizacion} | ${aforoEvento}`
         );
     }
 }
-
-// Siguiente funcion Filtro
 
 function filtrarEventos(lista, limite) {
     let encontrados = 0;
@@ -28,10 +24,6 @@ function filtrarEventos(lista, limite) {
     return encontrados;
 }
 
-
-
-// Contar los tipos de eventos de cada categoria que existen
-
 function contarPorCategoria(lista) {
     let carreras = 0;
     let gastronomicos = 0;
@@ -42,15 +34,12 @@ function contarPorCategoria(lista) {
             case "Carrera":
                 carreras++;
                 break;
-
             case "Gastronomico":
                 gastronomicos++;
                 break;
-
             case "Pesca":
                 pescas++;
                 break;
-
             default:
                 console.log("Categoría desconocida:", evento.tipoEvento);
         }
@@ -61,11 +50,6 @@ function contarPorCategoria(lista) {
     console.log("Gastronómicos:", gastronomicos);
     console.log("Pesca:", pescas);
 }
-//---------------------------------------------------
-//                                                  -
-                    //Sesion 8                      -
-//                                                  -
-//---------------------------------------------------
 
 function buscarPorTexto(lista, texto) {
     const resultados = [];
@@ -106,34 +90,25 @@ function eliminarPorId(lista, id) {
     return false;
 }
 
-  //                //
- // Ejercicios 8.2 //
-//                //
-
 function estadisticas(lista) {
     if (lista.length === 0) {
-        console.log("La lista de eventos está vacía.");
-        return;
+        return null;
     }
 
     let total = 0;
-    let mayor = lista[0];
+    let maximo = lista[0];
 
     for (const evento of lista) {
         total += evento.aforo;
 
-        if (evento.aforo > mayor.aforo) {
-            mayor = evento;
+        if (evento.aforo > maximo.aforo) {
+            maximo = evento;
         }
     }
 
-// Calculo la media
-
-    const media = total / lista.length;
-
-    console.log("--- Estadísticas de eventos ---");
-    console.log("Total de aforo:", total);
-    console.log("Media de aforo:", media.toFixed(1));
-    console.log("Evento con mayor aforo:", mayor.nombre);
-    console.log("Aforo máximo:", mayor.aforo);
+    return {
+        total: total,
+        media: total / lista.length,
+        maximo: maximo
+    };
 }
